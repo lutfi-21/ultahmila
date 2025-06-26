@@ -1,0 +1,83 @@
+body {
+  background-color: #ff9a9e;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background : linear-gradient(135deg, #ff9a9e, #fad0c4);
+  overflow: hidden;
+}
+#opening, #main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease;
+}
+#main {
+  opacity: 0;
+  pointer-events: none;
+}
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  color: white;
+  text-shadow: 2px 2px #ff69b4;
+}
+p {
+  color: rgb(106, 61, 61);
+  font-size: 1.2em;
+}
+.button {
+  padding: 1em 2em;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff6f91;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #ff3e6c;
+}
+.message {
+  justify-content: center;
+  text-align: center;
+  font-size: 2em;
+  max-width: 90%;
+  color: #7a3d3d;
+  font-family: 'Great Vibes', cursive;
+  animation: fadeInUp 2s ease forwards;
+  border-radius: 10vh;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.flower {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url('flower.png');
+  background-size: cover;
+  animation: float 10s linear infinite;
+}
+@keyframes float {
+  from {
+    transform: translateY(100vh) rotate(0deg);
+  }
+  to {
+    transform: translateY(-100vh) rotate(360deg);
+  }
+}
